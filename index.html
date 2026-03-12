@@ -400,7 +400,7 @@
         .shelter-icon { font-size: 22px; line-height: 1; }
         .user-icon { font-size: 22px; line-height: 1; }
 
-        #useGPS.tracking {
+        #getCurrentLocation.tracking {
             background: var(--safe);
             color: white;
             animation: pulse-green 2s infinite;
@@ -747,7 +747,7 @@ function initializeApp() {
             gpsWatchId = null;
         }
 
-        const btn = document.getElementById('useGPS');
+        const btn = document.getElementById('getCurrentLocation');
         btn.textContent = '⏳ Getting GPS...';
         btn.disabled = true;
         autoTrackingActive = true;
@@ -786,7 +786,7 @@ function initializeApp() {
         }
         autoTrackingActive = false;
         lastNearestId = null;
-        const btn = document.getElementById('useGPS');
+        const btn = document.getElementById('getCurrentLocation');
         btn.textContent = '📍 Use My GPS Location';
         btn.classList.remove('tracking');
     }
